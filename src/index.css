@@ -1,39 +1,78 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  code {
-    font-family: 'JetBrains Mono', monospace;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
-@layer components {
-  .btn-primary {
-    @apply bg-primary-blue text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300;
-  }
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  .btn-secondary {
-    @apply border-2 border-primary-blue text-primary-blue px-6 py-3 rounded-lg font-medium hover:bg-primary-blue hover:text-white transition-colors duration-300;
-  }
+code {
+  font-family: 'JetBrains Mono', monospace;
+}
 
-  .section-title {
-    @apply text-3xl md:text-4xl font-bold text-primary-dark mb-8 after:content-[''] after:block after:w-20 after:h-1 after:bg-primary-blue after:mt-4;
-  }
+.btn-primary {
+  background-color: #1e40af;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
 
-  .card {
-    @apply bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300;
-  }
+.btn-primary:hover {
+  background-color: #1e3a8a;
+}
+
+.btn-secondary {
+  border: 2px solid #1e40af;
+  color: #1e40af;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #1e40af;
+  color: white;
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 5rem;
+  height: 0.25rem;
+  background-color: #1e40af;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
 }
