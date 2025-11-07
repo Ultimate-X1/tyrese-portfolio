@@ -52,7 +52,7 @@ const Hero = () => {
         ))}
 
         {/* Grid pattern overlay */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="white" fill-opacity="0.03"%3E%3Cpath d="M0 0h40v40H0z"/%3E%3Cpath d="M0 0h20v20H0zM20 20h20v20H20z"/%3E%3C/g%3E%3C/svg%3E')] opacity-20" />
+        <div className="absolute inset-0 opacity-20" style={{backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px, transparent 39px, rgba(255,255,255,0.05) 39px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 39px, rgba(255,255,255,0.05) 39px)', backgroundSize: '40px 40px'}} />
       </div>
 
       {/* Main Content */}
