@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaFilter, FaRobot, FaCode, FaCogs } from 'react-icons/fa';
+import { FaRobot, FaCode, FaCogs } from 'react-icons/fa';
 import ProjectCard from '../common/ProjectCard';
 import { projects } from '../../data/projects';
 
