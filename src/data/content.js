@@ -2,7 +2,7 @@
 export const siteContent = {
   hero: {
     title: "Hi, I'm (Tyrese) George Otieno",
-    image: "/images/george.jpg",
+    image: "/tyrese-portfolio/images/george.jpg",
     subtitle: "Mechatronics Engineer & Innovator",
     description: "Designing intelligent systems that merge mechanics, electronics, and software",
     cta1: "View My Work",
