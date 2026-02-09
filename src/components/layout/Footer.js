@@ -11,17 +11,17 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: FaGithub,
-      href: "https://github.com/tyresegeorge",
+      href: "https://github.com/Ultimate-X1",
       label: "GitHub"
     },
     {
       icon: FaLinkedin,
-      href: "https://linkedin.com/in/tyresegeorge",
+      href: "https://www.linkedin.com/in/tyrese-george-3d-mechatronics-engineer",
       label: "LinkedIn"
     },
     {
       icon: FaEnvelope,
-      href: "mailto:tyrese.george@example.com",
+      href: "mailto:tyresegeorge476@gmail.com",
       label: "Email"
     }
   ];
@@ -94,6 +94,7 @@ const Footer = () => {
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.3 + index * 0.1 }}
+                  {...(social.href.startsWith('mailto:') ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
                 >
                   <social.icon size={18} />
                 </motion.a>

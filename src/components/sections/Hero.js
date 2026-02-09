@@ -60,15 +60,17 @@ const Hero = () => {
         <div className="space-y-8">
           {/* Profile Image/Avatar */}
           <motion.div
-            className="relative mx-auto w-40 h-40 md:w-48 md:h-48"
+            className="relative mx-auto w-1/2 aspect-square"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             <div className="absolute inset-0 bg-white/20 rounded-full backdrop-blur-sm border-4 border-white/30" />
-            <div className="absolute inset-2 bg-gradient-to-br from-white/30 to-white/10 rounded-full flex items-center justify-center">
-              <span className="text-white text-5xl md:text-6xl font-bold">TG</span>
-            </div>
+            <img
+              src={siteContent.hero.image}
+              alt="Tyrese George Profile"
+              className="absolute inset-2 w-full h-full object-cover rounded-full"
+            />
 
             {/* Orbiting dots */}
             {[0, 120, 240].map((rotation, index) => (
@@ -150,36 +152,37 @@ const Hero = () => {
             </motion.button>
           </motion.div>
 
-          {/* Social Links */}
-          <motion.div
-            className="flex justify-center space-x-6 pt-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            {[
-              { icon: FaGithub, href: "https://github.com/tyresegeorge", label: "GitHub" },
-              { icon: FaLinkedin, href: "https://linkedin.com/in/tyresegeorge", label: "LinkedIn" },
-              { icon: FaEnvelope, href: "mailto:tyrese.george@example.com", label: "Email" }
-            ].map((social, index) => (
-              <motion.a
-                key={social.label}
-                href={social.href}
-                aria-label={social.label}
-                className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-primary-blue transition-all duration-300"
-                whileHover={{ scale: 1.2, rotate: 360 }}
-                whileTap={{ scale: 0.9 }}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1 + index * 0.1 }}
-              >
-                <social.icon size={20} />
-              </motion.a>
-            ))}
-          </motion.div>
-        </div>
+            {/* Social Media Icons */}
+                <motion.div
+                className="flex justify-center space-x-6 pt-8"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                >
+                {[
+                  { icon: FaGithub, href: "https://github.com/Ultimate-X1", label: "GitHub" },
+                  { icon: FaLinkedin, href: "https://www.linkedin.com/in/tyrese-george-3d-mechatronics-engineer", label: "LinkedIn" },
+                  { icon: FaEnvelope, href: "mailto:tyresegeorge476@gmail.com", label: "Email" }
+                ].map((social, index) => (
+                  <motion.a
+                  key={social.label}
+                  href={social.href}
+                  aria-label={social.label}
+                  className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-primary-blue transition-all duration-300"
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                  whileTap={{ scale: 0.9 }}
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 1 + index * 0.1 }}
+                  {...(social.href.startsWith('mailto:') ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+                  >
+                  <social.icon size={20} />
+                  </motion.a>
+                ))}
+                </motion.div>
+              </div>
 
-        {/* Scroll Indicator */}
+              {/* Scroll Indicator */}
         <motion.div
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white"
           initial={{ opacity: 0, y: 20 }}

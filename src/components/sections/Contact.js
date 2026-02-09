@@ -9,14 +9,14 @@ const Contact = () => {
     {
       icon: FaEnvelope,
       label: "Email",
-      value: "tyrese.george@example.com",
-      href: "mailto:tyrese.george@example.com"
+      value: "tyresegeorge476@gmail.com",
+      href: "mailto:tyresegeorge476@gmail.com"
     },
     {
       icon: FaPhone,
       label: "Phone",
-      value: "+254 XXX XXX XXX",
-      href: "tel:+254XXXXXXXXX"
+      value: "+254 700 582 758",
+      href: "tel:+254700582758"
     },
     {
       icon: FaMapMarkerAlt,
@@ -110,8 +110,6 @@ const Contact = () => {
                     <motion.a
                       key={social.platform}
                       href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg hover:bg-primary-blue hover:text-white transition-all duration-300 group"
                       whileHover={{ scale: 1.05, y: -2 }}
                       whileTap={{ scale: 0.95 }}
@@ -119,6 +117,7 @@ const Contact = () => {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.3 + index * 0.1 }}
+                      {...(social.url.startsWith('mailto:') ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
                     >
                       <IconComponent size={20} />
                       <span className="font-medium">{social.platform}</span>
@@ -245,7 +244,7 @@ const Contact = () => {
               transition={{ delay: 1.4 }}
             >
               <motion.a
-                href="mailto:tyrese.george@example.com"
+                href="mailto:tyresegeorge476@gmail.com"
                 className="btn-primary inline-flex items-center justify-center space-x-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

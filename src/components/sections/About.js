@@ -151,7 +151,7 @@ const About = () => {
                   key={index}
                   className={`absolute ${
                     index === 0 ? '-top-4 -right-4' :
-                    index === 1 ? '-bottom-4 -left-4' :
+                    index === 1 ? 'top-1/2 -left-8 transform -translate-y-1/2' :
                     'top-1/2 -right-8 transform -translate-y-1/2'
                   } bg-white rounded-lg shadow-lg p-4 flex items-center space-x-3 z-10`}
                   initial={{ opacity: 0, scale: 0 }}

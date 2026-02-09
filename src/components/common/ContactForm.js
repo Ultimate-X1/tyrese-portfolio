@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import { siteContent } from '../../data/content';
 
 const ContactForm = () => {
@@ -62,12 +63,29 @@ const ContactForm = () => {
     setSubmitStatus(null);
 
     try {
-      // Simulate form submission (replace with actual Netlify Forms implementation)
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // EmailJS configuration - Replace with your actual IDs from https://www.emailjs.com/
+      // 1. Create account at EmailJS
+      // 2. Add email service (Gmail recommended)
+      // 3. Create email template with variables: {{from_name}}, {{from_email}}, {{message}}
+      // 4. Set template recipient to: tyresegeorge476@gmail.com
+      // 5. Get your Service ID, Template ID, and Public Key from dashboard
+      const serviceId = 'service_i2sq2vl';
+      const templateId = 'template_vrvwvvn'; 
+      const publicKey = 'SBtjqNt7XT2FiwE8i'; // Replace with your EmailJS Public Key
+
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: 'tyresegeorge476@gmail.com'
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
 
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
+      console.error('EmailJS error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -130,13 +148,9 @@ const ContactForm = () => {
 
       {/* Contact Form */}
       <form
-        name="contact"
-        method="POST"
-        data-netlify="true"
         onSubmit={handleSubmit}
         className="space-y-6"
       >
-        <input type="hidden" name="form-name" value="contact" />
 
         {formFields.map((field) => (
           <motion.div

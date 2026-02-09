@@ -41,7 +41,7 @@ export const experience = [
     title: "Mechatronics Engineering Degree",
     organization: "Dedan Kimathi University of Technology",
     location: "Nyeri, Kenya",
-    duration: "2020 - 2024",
+    duration: "2022 - present",
     type: "education",
     description: `Bachelor of Science in Mechatronics Engineering focusing on the integration of mechanical, electronic,
     and software engineering. Coursework emphasized robotics, control systems, embedded systems, and automation.

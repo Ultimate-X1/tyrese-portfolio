@@ -1,7 +1,8 @@
 // Main content for the portfolio
 export const siteContent = {
   hero: {
-    title: "Hi, I'm Tyrese George",
+    title: "Hi, I'm (Tyrese) George Otieno",
+    image: "/images/george.jpg",
     subtitle: "Mechatronics Engineer & Innovator",
     description: "Designing intelligent systems that merge mechanics, electronics, and software",
     cta1: "View My Work",
@@ -11,7 +12,7 @@ export const siteContent = {
   about: {
     title: "About Me",
     bio: `I am a Mechatronics Engineer passionate about robotics, automation, embedded systems, and smart product design.
-    Over the years, I've developed a mix of mechanical, electrical, and software skills — from CAD modeling and circuit design
+    Over the years, I've developed a mix of mechanical, electrical, and software skills; from CAD modeling and circuit design
     to microcontroller programming and front-end development.
 
     My journey began at Dedan Kimathi University, where I built a strong foundation in engineering principles while discovering
@@ -22,7 +23,7 @@ export const siteContent = {
     I bring the same level of dedication and attention to detail to every project. My goal is to continue pushing the boundaries
     of what's possible at the intersection of mechanical design, electronics, and software.`,
     cvButtonText: "Download CV",
-    cvLink: "/resume.pdf"
+    cvLink: "/documents/george-otieno-cv.pdf"
   },
 
   contact: {
@@ -39,17 +40,17 @@ export const siteContent = {
     social: [
       {
         platform: "GitHub",
-        url: "https://github.com/tyresegeorge",
+        url: "https://github.com/Ultimate-X1",
         icon: "FaGithub"
       },
       {
         platform: "LinkedIn",
-        url: "https://linkedin.com/in/tyresegeorge",
+        url: "https://www.linkedin.com/in/tyrese-george-3d-mechatronics-engineer",
         icon: "FaLinkedin"
       },
       {
         platform: "Email",
-        url: "mailto:tyrese.george@example.com",
+        url: "mailto:tyresegeorge476@gmail.com",
         icon: "FaEnvelope"
       }
     ]
