@@ -149,7 +149,7 @@ const About = () => {
               {highlights.map((highlight, index) => (
                 <motion.div
                   key={index}
-                  className={`absolute ${
+                  className={`hidden md:block absolute ${
                     index === 0 ? '-top-4 -right-4' :
                     index === 1 ? 'top-1/2 -left-8 transform -translate-y-1/2' :
                     'top-1/2 -right-8 transform -translate-y-1/2'

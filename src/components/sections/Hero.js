@@ -80,8 +80,7 @@ const Hero = () => {
                 style={{ transform: `rotate(${rotation}deg)` }}
               >
                 <motion.div
-                  className="absolute w-3 h-3 bg-white rounded-full"
-                  style={{ transformOrigin: '96px center' }}
+                  className="absolute w-3 h-3 bg-white rounded-full orbit-md"
                   animate={{
                     rotate: [0, 360],
                   }}

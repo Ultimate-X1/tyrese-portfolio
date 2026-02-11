@@ -47,7 +47,6 @@ export const experience = [
     and software engineering. Coursework emphasized robotics, control systems, embedded systems, and automation.
     Completed multiple projects involving system design, programming, and hardware integration.`,
     achievements: [
-      "Graduated with First Class Honors (GPA: 3.8/4.0)",
       "Led multiple successful team projects in robotics and automation",
       "Received Dean's List recognition for academic excellence",
       "Active member of the Engineering Club and Robotics Society"

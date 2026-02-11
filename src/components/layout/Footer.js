@@ -80,9 +80,10 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-col items-center text-center"
           >
             <h3 className="text-xl font-semibold mb-4">Connect</h3>
-            <div className="flex space-x-4 mb-6">
+            <div className="flex justify-center space-x-4 mb-6">
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={social.label}

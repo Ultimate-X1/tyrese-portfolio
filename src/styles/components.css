@@ -42,6 +42,23 @@
   transition: width 0.3s ease;
 }
 
+/* Orbiting dots - responsive positioning */
+.orbit-md {
+  transform-origin: 50px center !important;
+}
+
+@media (min-width: 768px) {
+  .orbit-md {
+    transform-origin: 80px center !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .orbit-md {
+    transform-origin: 96px center !important;
+  }
+}
+
 /* Navigation active state */
 .nav-link-active {
   position: relative;

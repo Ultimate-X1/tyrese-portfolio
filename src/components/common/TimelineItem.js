@@ -58,7 +58,7 @@ const TimelineItem = ({ item, index, isLeft }) => {
 
       {/* Timeline Dot */}
       <motion.div
-        className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-blue rounded-full border-4 border-white shadow-lg z-10"
+        className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-blue rounded-full border-4 border-white shadow-lg z-10"
         whileHover={{ scale: 1.2 }}
       />
 

@@ -83,7 +83,7 @@ const Experience = () => {
                   icon: "🎓",
                   title: "Education",
                   description: "B.Sc. Mechatronics Engineering from Dedan Kimathi University",
-                  details: ["First Class Honors", "Dean's List", "Engineering Society Member"]
+                  details: ["Dean's List", "Engineering Society Member"]
                 },
                 {
                   icon: "🏭",
@@ -134,9 +134,9 @@ const Experience = () => {
               transition={{ delay: 1.6 }}
             >
               <h4 className="text-xl font-semibold mb-6">Skills Growth Journey</h4>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <div className="flex justify-between items-center mb-4">
-                  {["2020", "2021", "2022", "2023", "2024"].map((year, index) => (
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6">
+                <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-4">
+                  {["2022", "2023", "2024", "2025", "2026"].map((year, index) => (
                     <motion.div
                       key={year}
                       className="text-center"
@@ -145,17 +145,17 @@ const Experience = () => {
                       viewport={{ once: true }}
                       transition={{ delay: 1.8 + index * 0.1 }}
                     >
-                      <div className="text-sm font-medium mb-2">{year}</div>
+                      <div className="text-xs md:text-sm font-medium mb-2">{year}</div>
                       <motion.div
-                        className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto"
+                        className="w-12 h-12 md:w-16 md:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto"
                         whileHover={{ scale: 1.2, rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
-                        <span className="text-xs font-bold">
-                          {year === "2020" ? "Start" :
-                           year === "2021" ? "Learn" :
-                           year === "2022" ? "Build" :
-                           year === "2023" ? "Grow" : "Excel"}
+                        <span className="text-xs md:text-sm font-bold">
+                          {year === "2023" ? "Arduino" :
+                           year === "2024" ? "CAD" :
+                           year === "2025" ? "Matlab" :
+                           year === "2026" ? "ROS" : "Python"}
                         </span>
                       </motion.div>
                     </motion.div>
